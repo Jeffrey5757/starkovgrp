@@ -1,0 +1,29 @@
+@import 'includes/variables';
+@import 'includes/mixins';
+
+@import './general';
+@import './post';
+
+
+
+
+// styles
+
+@import 'components/common/header';
+@import 'components/common/mobile-menu';
+@import 'components/common/footer';
+@import 'components/common/modal';
+@import 'components/common/contact-form';
+@import 'components/common/sidebar';
+
+
+
+@import 'components/pages/index';
+@import 'components/pages/page-404';
+@import 'components/pages/page-contacts';
+@import 'components/pages/page-search';
+@import 'components/pages/text-page';
+@import 'components/pages/news-page';
+
+
+

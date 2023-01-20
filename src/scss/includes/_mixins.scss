@@ -1,0 +1,120 @@
+// Fonts
+@function calcFluid($f-min, $f-max, $w-min: 320, $w-max: 1920) {
+	$k: ($f-max - $f-min)/($w-max - $w-min);
+	$b: $f-min - $k * $w-min;
+  
+	$b: $b * 1px;
+  
+	@return calc( #{$k} * 100vw + #{$b} );
+}
+
+@function calcFluidP($f-min, $f-max, $v-min: 320, $v-max: 1920, $percent: 100) {
+	$k: ($f-max - $f-min)/($v-max - $v-min);
+	$b: $f-min - $k * $v-min;
+  
+	$b: $b * 1px;
+
+	$p: $percent * 1%;
+  
+	@return calc( #{$p} + (#{$k} * 100vw + #{$b}) );
+}
+
+@function calcFluidM($f-min, $f-max, $v-min: 320, $v-max: 1920, $percent: 100) {
+	$k: ($f-max - $f-min)/($v-max - $v-min);
+	$b: $f-min - $k * $v-min;
+  
+	$b: $b * 1px;
+
+	$p: $percent * 1%;
+  
+	@return calc( #{$p} - (#{$k} * 100vw + #{$b}) );
+}
+
+
+
+
+
+
+
+// General fonts
+@mixin font-h1 {
+	color: $color-text;
+	font-size: calcFluid(24, 45, 320, 1920);
+	font-weight: 500;
+	line-height: calcFluid(30, 55, 320, 1920);
+}
+
+@mixin font-h2 {
+	color: $color-text;
+	font-size: calcFluid(18, 30, 320, 1920);
+	font-weight: 500;
+	line-height: calcFluid(24, 40, 320, 1920);
+}
+
+@mixin font-h3 {
+	color: $color-text;
+	font-size: calcFluid(16, 20, 320, 1920);
+	font-weight: 500;
+	line-height: calcFluid(22, 28, 320, 1920);
+}
+
+@mixin font-p {
+	color: $color-text;
+	font-size: calcFluid(14, 18, 320, 1920);
+	font-weight: 400;
+	line-height: calcFluid(20, 30, 320, 1920);
+}
+
+@mixin font-sign {
+	color: $caption-color;
+	font: {
+		size: calcFluid(11, 13, 320, 1920);
+	}
+}
+
+
+
+@mixin font-45 {
+	font-size: calcFluid(23, 45);
+	line-height: calcFluid(28, 51);
+}
+
+@mixin font-32  {
+	font-size: calcFluid(20, 32);
+	line-height: calcFluid(26, 38);
+}
+
+@mixin font-24  {
+	font-size: calcFluid(16, 24);
+	line-height: calcFluid(22, 30);
+}
+
+@mixin font-20 {
+	font-size: calcFluid(15, 20);
+	line-height: calcFluid(20, 26);
+}
+
+@mixin font-18 {
+	font-size: calcFluid(14, 18);
+	line-height: calcFluid(18, 24);
+}
+
+@mixin font-16 {
+	font-size: calcFluid(13, 16);
+	line-height: calcFluid(18, 22);
+}
+
+@mixin font-15 {
+	font-size: calcFluid(13, 15);
+	line-height: calcFluid(18, 22);
+}
+
+@mixin font-14 {
+	font-size: calcFluid(12, 14);
+	line-height: calcFluid(16, 16);
+}
+
+@mixin font-13 {
+	font-size: calcFluid(11, 13);
+	line-height: calcFluid(12, 16);
+}

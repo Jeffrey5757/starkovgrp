@@ -1,0 +1,19 @@
+@font-face {
+	font-family: 'Noah';
+	src:
+	url('./Noah/Noah-Regular.eot?#iefix') format('embedded-opentype'),
+	url('./Noah/Noah-Regular.woff') format('woff'),
+	url('./Noah/Noah-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Noah';
+	src:
+	url('./Noah/Noah-Bold.eot?#iefix') format('embedded-opentype'),
+	url('./Noah/Noah-Bold.woff') format('woff'),
+	url('./Noah/Noah-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
